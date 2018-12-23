@@ -1,9 +1,10 @@
 {
     "name": "prop2yaml",
-    "displayName": "prop2yaml",
-    "description": "",
-    "version": "0.0.1",
-    "publisher": "",
+    "displayName": "Properties To Yaml",
+    "description": "Convert properties to yaml",
+    "version": "0.0.3",
+    "publisher": "tanaka-x",
+    "icon": "images/icon.png",
     "engines": {
         "vscode": "^1.27.0"
     },
@@ -11,22 +12,22 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:prop2yaml.convert"
     ],
-    "main": "./out/extension",
+    "main": "./out/prop2yaml",
     "contributes": {
         "menus": {
             "editor/context": [
                 {
-                    "command": "extension.sayHello",
+                    "command": "prop2yaml.convert",
                     "group": "9_cutcopypaste@500"
                 }
             ]
         },
         "commands": [
             {
-                "command": "extension.sayHello",
-                "title": "Hello World"
+                "command": "prop2yaml.convert",
+                "title": "Convert properties to yaml"
             }
         ]
     },
@@ -43,5 +44,9 @@
         "tslint": "^5.8.0",
         "@types/node": "^8.10.25",
         "@types/mocha": "^2.2.42"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tanaka-x/prop2yaml.git"
     }
 }

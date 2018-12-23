@@ -10,12 +10,12 @@ import * as vscode from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
 
     // コンソール出力
-    console.log('Congratulations, your extension "helloworld" is now active!');
+    console.log('Congratulations, your extension "prop2yaml.convert" is now active!');
 
     // vscodeモジュールのcommands.registerCommandの呼び出し
-    // commandは、「extension.sayHellow」で、実行時には、
+    // commandは、「prop2yaml.convert」で、実行時には、
     // 「（） => 」引数なしで呼び出され、「vscode.window.showInformationMessage('Hello World!');」が実行されます。
-    let disposable = vscode.commands.registerCommand('extension.sayHello', () => {
+    let disposable = vscode.commands.registerCommand('prop2yaml.convert', () => {
         let editor = vscode.window.activeTextEditor; // エディタ取得
         if (typeof (editor) !== "undefined") {
             let doc = editor.document;            // ドキュメント取得
