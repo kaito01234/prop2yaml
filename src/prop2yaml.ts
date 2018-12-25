@@ -33,10 +33,6 @@ export function activate(context: vscode.ExtensionContext) {
             let text = doc.getText(cur_selection); //取得されたテキスト
             let properties = text.split(/\r\n|\r|\n/); //改行区切り
 
-            for (let i = 0; i < properties.length; i++) { //スペースを除去
-                properties[i] = properties[i].replace(/\s+/g, '');
-            }
-
             let yaml = ""; //加工後のyaml
             let oldparams = [""]; //1行前のproperties
 
@@ -51,7 +47,13 @@ export function activate(context: vscode.ExtensionContext) {
 
                     let params = sides[0].split("."); //keyを "." で分割する
 
+                    //valueの先頭と末尾のスペースを除去する
+                    sides[1] = sides[1].trim();
+
                     for (let i = 0; i < params.length; i++) {
+                        //keyの先頭と末尾のスペースを除去する
+                        params[i] = params[i].trim();
+
                         let new1 = params[i];
                         let new2 = params[i].replace(/\[[0-9]+\]$/, "[]");
                         let old1 = "";
