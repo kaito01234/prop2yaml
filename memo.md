@@ -1,7 +1,23 @@
 ### How to Typescript build
-* npm install
-* npm install -g typescript
-* tsc --build tsconfig.json
+```
+npm install
+npm install -g typescript
+tsc --build tsconfig.json
+```
+
+### パッケージ作成
+```
+npm install -g vsce
+```
+
+### MarketPlaceへの公開
+* publisher
+```
+vsce ls-publishers
+vsce login <publisher>
+vsce publish
+```
+
 
 ### ロジック（メモ）
 * 一致か？
