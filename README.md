@@ -1,7 +1,9 @@
 ### How to Use
-* right click to "Convert properties to yaml"
+
+- right click to "Convert properties to yaml"
 
 ### example
+
 ```properties
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 spring.datasource.url=jdbc:mysql://cent7.a5.jp:3306/stemmdoc?useSSL=false&zeroDateTimeBehavior=convertToNull
