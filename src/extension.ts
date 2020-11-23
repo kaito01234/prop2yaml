@@ -34,9 +34,9 @@ export function activate(context: vscode.ExtensionContext) {
 
       for (let propertie of properties) {
         //propertiesを1行ずつ回す処理
-        let mat = new RegExp("#", "ig");
+        let mat = new RegExp("^#", "ig");
 
-        if (propertie !== "" || !mat.test(propertie)) {
+        if (propertie !== "" && !mat.test(propertie)) {
           let space = ""; //keyの前につける[space]
           let matchFlag = true; //key一致フラグ
           let sides = propertie.split("="); //key,valueい分割する
@@ -152,6 +152,8 @@ export function activate(context: vscode.ExtensionContext) {
             space += "  ";
           }
           oldparams = params; //1行前の情報を保持する
+        } else {
+          yaml += propertie + "\n";
         }
       }
       //エディタ選択範囲にテキストを反映
