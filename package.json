@@ -1,8 +1,10 @@
 {
   "name": "prop2yaml",
-  "displayName": "prop2yaml",
-  "description": "",
-  "version": "0.0.1",
+  "displayName": "Properties To Yaml",
+  "description": "Convert properties to yaml",
+  "version": "0.0.7",
+  "publisher": "tanaka-x",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.51.0"
   },
@@ -55,5 +57,9 @@
     "ts-loader": "^8.0.3",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tanaka-x/prop2yaml.git"
   }
 }
