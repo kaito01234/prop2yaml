@@ -1,8 +1,8 @@
 {
   "name": "prop2yaml",
   "displayName": "Properties To Yaml",
-  "description": "Convert properties to yaml",
-  "version": "0.0.7",
+  "description": "Convert properties to Yaml",
+  "version": "0.1.0",
   "publisher": "tanaka-x",
   "icon": "images/icon.png",
   "engines": {
@@ -16,18 +16,10 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
-    "menus": {
-      "editor/context": [
-        {
-          "command": "prop2yaml.convert",
-          "group": "9_cutcopypaste@500"
-        }
-      ]
-    },
     "commands": [
       {
         "command": "prop2yaml.convert",
-        "title": "Convert properties to yaml"
+        "title": "Convert properties to Yaml"
       }
     ]
   },
@@ -61,5 +53,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/tanaka-x/prop2yaml.git"
+  },
+  "dependencies": {
+    "java-properties": "^1.0.2",
+    "js-yaml": "^3.14.0"
   }
 }
