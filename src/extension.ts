@@ -3,14 +3,6 @@
 import * as vscode from "vscode";
 
 export function activate(context: vscode.ExtensionContext) {
-  // コンソール出力
-  console.log(
-    'Congratulations, your extension "prop2yaml.convert" is now active!'
-  );
-
-  // vscodeモジュールのcommands.registerCommandの呼び出し
-  // commandは、「prop2yaml.convert」で、実行時には、
-  // 「（） => 」引数なしで呼び出され、「vscode.window.showInformationMessage('Hello World!');」が実行されます。
   let disposable = vscode.commands.registerCommand("prop2yaml.convert", () => {
     let editor = vscode.window.activeTextEditor; // エディタ取得
     if (typeof editor !== "undefined") {
@@ -23,9 +15,6 @@ export function activate(context: vscode.ExtensionContext) {
         cur_selection = new vscode.Selection(startPos, endPos);
       }
 
-      /**
-       * ここでテキストを加工します。
-       **/
       let text = doc.getText(cur_selection); //取得されたテキスト
       let properties = text.split(/\r\n|\r|\n/); //改行区切り
 
@@ -39,7 +28,7 @@ export function activate(context: vscode.ExtensionContext) {
         if (propertie !== "" && !mat.test(propertie)) {
           let space = ""; //keyの前につける[space]
           let matchFlag = true; //key一致フラグ
-          let sides = propertie.split("="); //key,valueい分割する
+          let sides = propertie.split("="); //key,valueを分割する
           for (let i = 2; i < sides.length; i++) {
             //valueに "=" が設定されている場合の応急処置
             sides[1] += "=" + sides[i];
