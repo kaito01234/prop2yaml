@@ -2,7 +2,7 @@
   "name": "prop2yaml",
   "displayName": "Properties To Yaml",
   "description": "Convert properties to Yaml",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "publisher": "tanaka-x",
   "icon": "images/icon.png",
   "engines": {
